@@ -1,0 +1,9 @@
+---
+applications:
+- name: example-for-csp-testing
+  memory: 8M
+  disk_quota: 256M
+  buildpacks:
+    - python_buildpack
+  command: python main.py
+  health-check-type: process

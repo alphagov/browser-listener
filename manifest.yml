@@ -1,0 +1,11 @@
+---
+applications:
+- name: browser-listener-10c8e3692d0a
+  memory: 16M
+  disk_quota: 256M
+  services:
+    - prod-splunk-unlimited
+  buildpacks:
+    - python_buildpack
+  command: python main.py
+  health-check-type: process
