@@ -1,6 +1,7 @@
 ---
 applications:
 - name: browser-listener-10c8e3692d0a
+  instances: 2
   memory: 16M
   disk_quota: 256M
   services:
