@@ -1,0 +1,25 @@
+name: Test
+
+on:
+  workflow_dispatch:
+  pull_request:
+    branches:
+      - 'main'
+
+jobs:
+  deploy-to-paas:
+    runs-on: ubuntu-latest
+    name: Test
+    defaults:
+      run:
+        shell: bash
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v2
+      with:
+        path: main
+    - run: |
+        cd main/
+        
+        python -m pip install -r requirements.txt -r requirements-dev.txt
+        make test
