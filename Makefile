@@ -5,4 +5,5 @@ deploy:
 	cf7 push --strategy rolling
 
 test:
-	echo "Do test"
+	python -m doctest *.py
+	python -m pytest
