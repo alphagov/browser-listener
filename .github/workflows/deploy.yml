@@ -7,6 +7,8 @@ on:
       - 'main'
     paths:
       - '*.py'
+      - 'requirements.txt'
+      - 'requirements-dev.txt'
       - 'manifest.yml'
 
 jobs:
