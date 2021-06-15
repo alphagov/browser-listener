@@ -8,7 +8,7 @@ import base64
 from urllib.parse import urlparse
 from utils import client_ip
 
-allowed_domain_endings = [".gov.uk", ".cloudapps.digital"]
+allowed_domain_endings = [".gov.uk", ".cloudapps.digital", ".g7uk.org"]
 CSP_PREFIX = "csp_"
 
 
