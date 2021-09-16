@@ -8,7 +8,8 @@ import base64
 from urllib.parse import urlparse
 from utils import client_ip
 
-allowed_domain_endings = [".gov.uk", ".cloudapps.digital", ".g7uk.org"]
+allowed_domain_endings = [".gov.uk", ".cloudapps.digital", ".g7uk.org", ".ukcop26.org"]
+allowed_domains = ["ukcop26.org"]
 CSP_PREFIX = "csp_"
 
 
@@ -38,6 +39,10 @@ def allowed_document_uri(doc_uri: str) -> bool:
     if o:
         for d in allowed_domain_endings:
             if o.hostname and o.hostname.endswith(d):
+                res = True
+                break
+        for d in allowed_domains:
+            if o.hostname and o.hostname == d:
                 res = True
                 break
 
