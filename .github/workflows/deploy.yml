@@ -40,6 +40,6 @@ jobs:
 
         cf7 api https://api.cloud.service.gov.uk
         cf7 auth "${{ secrets.PAAS_USER }}" "${{ secrets.PAAS_PASS }}"
-        cf target -o gds-security -s cyber-sec-sandbox
+        cf target -o gds-security -s live
 
         make deploy
